@@ -1,0 +1,105 @@
+:root {
+    --bg-navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --white: #e6f1ff;
+    --green: #64ffda;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-navy); color: var(--slate); font-family: 'Inter', sans-serif; line-height: 1.5; overflow-x: hidden; }
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10, 25, 47, 0.85); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 10; }
+.logo { color: var(--green); font-weight: bold; font-size: 1.5rem; border: 2px solid var(--green); padding: 5px 10px; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li a { text-decoration: none; color: var(--white); margin: 0 15px; font-size: 0.85rem; font-family: 'Fira Code', monospace; transition: 0.3s; }
+.nav-links li a:hover { color: var(--green); }
+.resume-btn { border: 1px solid var(--green); color: var(--green) !important; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
+
+/* Hero Section */
+header#hero { height: 100vh; display: flex; align-items: center; padding: 0 10%; }
+.mono { color: var(--green); font-family: 'Fira Code', monospace; margin-bottom: 20px; }
+h1 { font-size: 4.5rem; color: var(--white); font-weight: 700; }
+h2.dynamic-text { font-size: 3.5rem; color: var(--light-slate); }
+.description { max-width: 540px; margin-top: 20px; font-size: 1.1rem; }
+.cta-outline { margin-top: 50px; display: inline-block; padding: 1.25rem 1.75rem; border: 1px solid var(--green); color: var(--green); text-decoration: none; font-family: 'Fira Code', monospace; border-radius: 4px; transition: 0.3s; }
+.cta-outline:hover { background: rgba(100, 255, 218, 0.1); }
+
+/* Main Sections */
+section { padding: 100px 10%; }
+.numbered-heading { display: flex; align-items: center; color: var(--white); margin-bottom: 40px; font-size: 1.8rem; }
+.numbered-heading::before { content: "01. "; color: var(--green); font-family: 'Fira Code', monospace; font-size: 1.2rem; margin-right: 10px; }
+#experience .numbered-heading::before { content: "02. "; }
+#projects .numbered-heading::before { content: "03. "; }
+
+.skills-list { display: grid; grid-template-columns: repeat(2, minmax(140px, 200px)); list-style: none; margin-top: 20px; }
+.skills-list li::before { content: "▹"; color: var(--green); margin-right: 10px; }
+
+.project-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+.project-card { background: var(--light-navy); padding: 2rem; border-radius: 4px; transition: 0.3s; position: relative; border-bottom: 2px solid transparent; }
+.project-card:hover { transform: translateY(-10px); border-bottom: 2px solid var(--green); }
+.project-card h3 { color: var(--white); margin-bottom: 10px; }
+.project-tags { margin-top: 20px; font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--light-slate); }
+
+/* ATTRACTIVE MODAL STYLING */
+.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(2, 12, 27, 0.95); overflow-y: auto; padding: 20px; }
+
+.modal-content-modern {
+    background-color: #f8f9fa;
+    margin: 2% auto;
+    width: 95%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.resume-wrapper { display: grid; grid-template-columns: 260px 1fr; min-height: 850px; }
+
+/* Resume Sidebar */
+.resume-sidebar { background-color: var(--bg-navy); color: var(--white); padding: 40px 30px; }
+.res-profile-circle { width: 70px; height: 70px; border: 2px solid var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; color: var(--green); margin-bottom: 30px; }
+.res-sidebar-section { margin-bottom: 30px; }
+.res-sidebar-section h4 { color: var(--green); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 15px; border-bottom: 1px solid var(--lightest-navy); padding-bottom: 5px; font-family: 'Fira Code', monospace; }
+.res-sidebar-section p { font-size: 0.8rem; margin-bottom: 8px; color: var(--light-slate); }
+.res-skill-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
+.res-skill-tags li { background: var(--light-navy); padding: 3px 8px; border-radius: 4px; font-size: 0.7rem; border: 1px solid var(--lightest-navy); color: var(--green); }
+
+/* Resume Main Paper */
+.resume-main { background: white; padding: 50px; color: #333; }
+.res-main-header h1 { color: var(--bg-navy); font-size: 2.2rem; margin: 0; font-weight: 700; }
+.res-main-header h3 { color: var(--slate); font-size: 1rem; margin-bottom: 30px; font-weight: 400; }
+.res-main-section h4 { font-size: 0.9rem; color: var(--bg-navy); border-left: 4px solid var(--green); padding-left: 10px; margin: 25px 0 12px 0; letter-spacing: 1px; }
+.res-main-section p { font-size: 0.85rem; line-height: 1.6; color: #555; }
+.res-exp { margin-bottom: 15px; }
+.res-exp strong { font-size: 0.9rem; color: #222; }
+.res-exp span { font-size: 0.75rem; color: var(--slate); float: right; }
+
+/* Resume Action Buttons */
+.resume-actions { display: flex; gap: 12px; margin-top: 40px; }
+.res-print-btn, .res-download-btn { padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; text-decoration: none; font-size: 0.8rem; transition: 0.3s; text-align: center; }
+.res-print-btn { background: var(--bg-navy); color: white; border: none; }
+.res-download-btn { background: transparent; color: var(--bg-navy); border: 2px solid var(--bg-navy); }
+.res-print-btn:hover { background: var(--green); color: var(--bg-navy); }
+.res-download-btn:hover { background: var(--bg-navy); color: var(--green); }
+
+.close-btn { position: absolute; right: 20px; top: 10px; font-size: 2rem; cursor: pointer; color: #333; z-index: 10; }
+
+@media (max-width: 768px) {
+    .resume-wrapper { grid-template-columns: 1fr; }
+    h1 { font-size: 3rem; }
+    h2.dynamic-text { font-size: 2rem; }
+}
+
+@media print {
+    .close-btn, .resume-actions, nav, #hero, #about, #projects, #contact { display: none !important; }
+    .modal { position: static; background: white; padding: 0; }
+    .modal-content-modern { box-shadow: none; margin: 0; width: 100%; border-radius: 0; }
+    .resume-sidebar { background: #f0f0f0 !important; color: black !important; border-right: 1px solid #ddd; }
+}

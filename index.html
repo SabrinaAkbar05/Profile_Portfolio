@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina Akbar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SA</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="resume-btn" id="openResume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <p class="mono">Hi, my name is</p>
+            <h1>Sabrina Akbar.</h1>
+            <h2 class="dynamic-text">I build secure systems and analyze data.</h2>
+            <p class="description">
+                I am a Computer Science undergraduate at Jinnah University for Women
+                specializing in Cybersecurity and Data Analysis. I focus on creating 
+                functional AI tools and securing digital infrastructures.
+            </p>
+            <a href="#projects" class="cta-outline">Check out my work!</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="numbered-heading">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    I’m a 3rd-year student passionate about problem-solving and web technologies. 
+                    I lead initiatives to promote digital safety and peer-to-peer learning as a leader in my community.
+                </p>
+                <p>Here are a few technologies I’ve been working with:</p>
+                <ul class="skills-list">
+                    <li>Python (ML/Data Science) </li>
+                    <li>Cybersecurity Analysis </li>
+                    <li>MySQL & Database Design </li>
+                    <li>HTML/CSS & JavaScript</li>
+                    <li>NLP & Text Preprocessing </li>
+                    <li>Assembly Language </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="numbered-heading">My Projects</h2>
+        <div class="project-container" id="projectGrid"></div>
+    </section>
+
+    <section id="contact">
+        <h2 class="numbered-heading">What's Next?</h2>
+        <h1>Get In Touch</h1>
+        <p>I’m currently open to remote opportunities and collaborations in Cybersecurity and Data Science.</p>
+        <a href="mailto:sabrinaakbar921@gmail.com" class="cta-outline">Say Hello</a>
+    </section>
+
+    <div id="resumeModal" class="modal">
+        <div class="modal-content-modern">
+            <span class="close-btn">&times;</span>
+            <div class="resume-wrapper">
+                <aside class="resume-sidebar">
+                    <div class="res-profile-circle">SA</div>
+                    <section class="res-sidebar-section">
+                        <h4>CONTACT</h4>
+                        <p>📍 Karachi, Pakistan </p>
+                        <p>📞 (+92) 332-1206539 </p>
+                        <p>📧 sabrinaakbar921@gmail.com</p>
+                    </section>
+                    <section class="res-sidebar-section">
+                        <h4>SKILLS</h4>
+                        <ul class="res-skill-tags">
+                            <li>Python </li>
+                            <li>Java</li>
+                            <li>MySQL </li>
+                            <li>HTML/CSS </li>
+                            <li>Git/GitHub </li>
+                            <li>Photoshop </li>
+                        </ul>
+                    </section>
+                </aside>
+
+                <main class="resume-main">
+                    <header class="res-main-header">
+                        <h1>SABRINA AKBAR</h1>
+                        <h3>Computer Science Undergraduate</h3>
+                    </header>
+
+                    <section class="res-main-section">
+                        <h4>PERSONAL STATEMENT</h4>
+                        <p>CS undergraduate with a focus on software development and web technologies. 
+                           Proven ability to apply Python and ML basics to create AI tools.</p>
+                    </section>
+
+                    <section class="res-main-section">
+                        <h4>EXPERIENCE</h4>
+                        <div class="res-exp">
+                            <strong>Data Science Intern | Money Mitra</strong> <span>2026</span>
+                            <p>Managed technical responsibilities and mastered data workflows.</p>
+                        </div>
+                        <div class="res-exp">
+                            <strong>Data Science Intern | CodeAlpha</strong> <span>2026</span>
+                            <p>Applied theoretical knowledge to hands-on projects.</p>
+                        </div>
+                        <div class="res-exp">
+                            <strong>Cybersecurity Intern | SYNTECXHUB</strong> <span>2026</span>
+                            <p>Tackled real-world security challenges and built a professional portfolio.</p>
+                        </div>
+                    </section>
+
+                    <div class="resume-actions">
+                        <button onclick="window.print()" class="res-print-btn">Print View</button>
+                        <a href="C:\Users\Dell\Desktop\PORTFOLIO\SabrinaAkbar-CV.pdf" download="Sabrina_Akbar_CV.pdf" class="res-download-btn">Download PDF</a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
